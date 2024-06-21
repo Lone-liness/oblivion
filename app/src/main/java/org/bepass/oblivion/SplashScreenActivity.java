@@ -27,11 +27,11 @@ public class SplashScreenActivity extends AppCompatActivity implements View.OnCl
         }, SHORT_SPLASH_DISPLAY_LENGTH);
     }
 
-    //@Override
-    // public void onClick(View v) {
+    @Override
+    public void onClick(View v) {
     //     // If the user clicks on the splash screen, move to the MainActivity immediately
     //     Intent mainIntent = new Intent(SplashScreenActivity.this, MainActivity.class);
     //     SplashScreenActivity.this.startActivity(mainIntent);
     //     SplashScreenActivity.this.finish();
-    // }
+    }
 }
