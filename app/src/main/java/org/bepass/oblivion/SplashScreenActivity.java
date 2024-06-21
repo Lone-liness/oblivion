@@ -16,8 +16,8 @@ public class SplashScreenActivity extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         // Initialize the LocaleHandler and set the locale
         LocaleHandler localeHandler = new LocaleHandler(this);
-        setContentView(R.layout.activity_splash_screen);
-        final int SHORT_SPLASH_DISPLAY_LENGTH = 1000; // 1 second
+        //setContentView(R.layout.activity_splash_screen);
+        final int SHORT_SPLASH_DISPLAY_LENGTH = 50; // 1 second
         findViewById(R.id.splashScreen).setOnClickListener(this);
         new Handler().postDelayed(() -> {
             // Create an Intent that will start the Main Activity.
@@ -27,11 +27,11 @@ public class SplashScreenActivity extends AppCompatActivity implements View.OnCl
         }, SHORT_SPLASH_DISPLAY_LENGTH);
     }
 
-    @Override
-    public void onClick(View v) {
-        // If the user clicks on the splash screen, move to the MainActivity immediately
-        Intent mainIntent = new Intent(SplashScreenActivity.this, MainActivity.class);
-        SplashScreenActivity.this.startActivity(mainIntent);
-        SplashScreenActivity.this.finish();
-    }
+    //@Override
+    // public void onClick(View v) {
+    //     // If the user clicks on the splash screen, move to the MainActivity immediately
+    //     Intent mainIntent = new Intent(SplashScreenActivity.this, MainActivity.class);
+    //     SplashScreenActivity.this.startActivity(mainIntent);
+    //     SplashScreenActivity.this.finish();
+    // }
 }
