@@ -9,7 +9,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 @SuppressLint("CustomSplashScreen")
-public class SplashScreenActivity extends AppCompatActivity implements View.OnClickListener {
+public class SplashScreenActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class SplashScreenActivity extends AppCompatActivity implements View.OnCl
         LocaleHandler localeHandler = new LocaleHandler(this);
         //setContentView(R.layout.activity_splash_screen);
         final int SHORT_SPLASH_DISPLAY_LENGTH = 50; // 1 second
-        findViewById(R.id.splashScreen).setOnClickListener(this);
+        //findViewById(R.id.splashScreen).setOnClickListener(this);
         new Handler().postDelayed(() -> {
             // Create an Intent that will start the Main Activity.
             Intent mainIntent = new Intent(SplashScreenActivity.this, MainActivity.class);
@@ -27,11 +27,11 @@ public class SplashScreenActivity extends AppCompatActivity implements View.OnCl
         }, SHORT_SPLASH_DISPLAY_LENGTH);
     }
 
-    @Override
-    public void onClick(View v) {
+    //@Override
+    //public void onClick(View v) {
     //     // If the user clicks on the splash screen, move to the MainActivity immediately
     //     Intent mainIntent = new Intent(SplashScreenActivity.this, MainActivity.class);
     //     SplashScreenActivity.this.startActivity(mainIntent);
     //     SplashScreenActivity.this.finish();
-    }
+    //}
 }
